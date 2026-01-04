@@ -143,3 +143,4 @@ class OrderListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = ("id", "tickets", "created_at")
+
