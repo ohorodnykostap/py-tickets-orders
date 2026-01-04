@@ -1,21 +1,35 @@
-from rest_framework import viewsets, filters
+from rest_framework import (
+    filters,
+    viewsets,
+)
 from rest_framework.permissions import IsAuthenticated
-from django_filters.rest_framework import DjangoFilterBackend, FilterSet
-import django_filters
 
-from cinema.models import Genre, Actor, CinemaHall, Movie, MovieSession, Order
+from django_filters import rest_framework as django_filters
+from django_filters.rest_framework import (
+    DjangoFilterBackend,
+    FilterSet,
+)
+
+from cinema.models import (
+    Actor,
+    CinemaHall,
+    Genre,
+    Movie,
+    MovieSession,
+    Order,
+)
 from cinema.serializers import (
-    GenreSerializer,
     ActorSerializer,
     CinemaHallSerializer,
-    MovieSerializer,
-    MovieListSerializer,
+    GenreSerializer,
     MovieDetailSerializer,
-    MovieSessionSerializer,
-    MovieSessionListSerializer,
+    MovieListSerializer,
+    MovieSerializer,
     MovieSessionDetailSerializer,
-    OrderSerializer,
+    MovieSessionListSerializer,
+    MovieSessionSerializer,
     OrderListSerializer,
+    OrderSerializer,
 )
 
 
